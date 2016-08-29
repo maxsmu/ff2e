@@ -22,7 +22,7 @@ Flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提�
 
 采用Flex布局的元素，称之为Flex 容器（flex container），它的所有子元素自动成为容器成员，称之为Flex项目（flex item）。
 
-![flex image](./images/flex.png)
+![flex image](./images/flex.svg)
 
 容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉的开始位置叫做cross start，结束位置叫做cross end。
 
@@ -86,7 +86,21 @@ Flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提�
 		flex-flow: <flex-direction> || <flex-wrap>;
 	}
 	
-* justify-content 属性
+例：
+	
+	.box { flex-flow: row; }
+	
+![](./images/flex-direction-row.svg)
+	
+	.box { flex-flow: column wrap; }
+	
+![](./images/flex-direction-column.svg)
+
+	.box { flex-flow: row-reverse wrap-reverse; }
+	
+![](./images/flex-direction-column-reverse.svg)
+	
+* justify-content 属性 
 
 `justify-content` 属性定义flex项目在主轴上的对齐方式。
 
@@ -94,7 +108,7 @@ Flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提�
 		justify-content: flex-start | flex-end | center | space-between | space-around;
 	}
 
-![justify-content](./images/justify-content.png)
+![justify-content](./images/justify-content.svg)
 
 其值有5种，分别是：
 
@@ -112,7 +126,7 @@ Flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提�
 		align-items: stretch | flex-start | flex-end | center | baseline;
 	}
 
-![align-items](./images/align-items.png)
+![align-items](./images/flex-align.svg)
 
 其值有5种，分别是：（以下假设交叉轴从上到下）
 
@@ -130,7 +144,7 @@ Flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提�
   		align-content: flex-start | flex-end | center | space-between | space-around | stretch;
 	}
 	
-![align-content](./images/align-content.png)
+![align-content](./images/align-content-example.svg) 
 
 其值有6种，分别是：
 
