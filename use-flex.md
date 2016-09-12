@@ -178,7 +178,7 @@ Flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提�
 
 * flex-grow 属性
 
-`flex-grow` 属性定义flex项目的放大比例，默认为0，即如果存在剩余空间，也不放大
+`flex-grow` 属性定义flex项目的扩展比率，默认为0，即如果存在剩余空间，也不放大
 
 	.item {
 		flex-grow: <number>; /* default: 0 */
@@ -190,7 +190,7 @@ Flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提�
 
 * flex-shrink 属性
 
-`flex-shrink` 属性定义flex项目的缩小比例，默认值为1，即如果空间不足，该项目将缩小
+`flex-shrink` 属性定义flex项目的收缩比率，默认值为1，即如果空间不足，该项目将缩小
 
 	.item {
 		flex-shrink: <number>;/* default:1 */
@@ -202,7 +202,7 @@ Flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提�
 
 * flex-basis 属性
 
-`flex-basis` 属性定义在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性计算主轴是否有多余空间。默认值为auto，即项目本来大小
+`flex-basis` 属性定义在分配多余空间之前，项目占据的主轴空间（main size）即伸缩基准值。浏览器根据这个属性计算主轴是否有多余空间。默认值为auto，即项目本来大小
 
 	.item {
 		flex-basis: <length> | auto; /* default : auto */
@@ -219,6 +219,10 @@ Flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提�
 	}
 	
 该属性有两个快捷值：auto （1 1 auto）和 none （0 0 auto）；
+
+	flex: 1,    则其计算值为 flex: 1 1 0%；
+	flex: auto, 则其计算值为 flex: 1 1 auto；
+	flex: none, 则其计算值为 flex: 0 0 auto；
 
 **建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值**
 
@@ -583,3 +587,11 @@ CSS 代码
 			flex: auto;
 		}
 	}
+	
+	
+1. 基本网格布局
+2. 百分比
+3. 三圣杯
+4. 表单
+5. 悬挂
+6. 
